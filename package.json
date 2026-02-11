@@ -15,7 +15,8 @@
     "axios": "0.21.1",
     "moment": "2.29.1",
     "express": "4.16.0",
-    "validator": "13.6.0"
+    "validator": "13.6.0",
+    "atob": "2.0.3"
   
   }
 }
