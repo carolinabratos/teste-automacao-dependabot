@@ -17,12 +17,8 @@ jobs:
           node-version: '20' # Use a versão que você usa no seu PC
           cache: 'npm'
 
-      - name: Instalar e Auditar
-        run: |
-          npm install
-          npm audit --audit-level=high # Verifica vulnerabilidades graves
+      - name: Instalar Dependências
+        run: npm install
 
-      - name: Rodar Testes
-        run: |
-          echo "Nenhum teste configurado ainda, validando apenas integridade."
-          npm audit --audit-level=high
+      - name: Validar Segurança
+        run: npm audit --audit-level=high
