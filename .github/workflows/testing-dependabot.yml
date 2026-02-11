@@ -1,0 +1,26 @@
+name: Validador de Dependencias
+on: pull_request # Roda sempre que um PR for aberto
+
+jobs:
+  check-integrity:
+    runs-on: ubuntu-latest
+    # Só roda se o PR foi aberto pelo Dependabot
+    if: github.actor == 'dependabot[bot]' 
+    
+    steps:
+      - name: Baixar Código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a versão que você usa no seu PC
+          cache: 'npm'
+
+      - name: Instalar e Auditar
+        run: |
+          npm install
+          npm audit --audit-level=high # Verifica vulnerabilidades graves
+
+      - name: Rodar Testes
+        run: npm test # O robô tenta rodar seus testes automáticos

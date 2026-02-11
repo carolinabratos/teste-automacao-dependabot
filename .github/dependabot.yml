@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly" # Ele vai rodar uma vez por semana
+    groups:
+      dependencies-group: # Nome do grupo
+        patterns:
+          - "*" # Isso agrupa TODAS as atualizações em um único PR
