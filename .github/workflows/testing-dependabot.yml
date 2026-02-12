@@ -22,4 +22,4 @@ jobs:
         run: npm install
 
       - name: Validar Segurança
-        run: npm audit --audit-level=moderate
+        run: npm audit --audit-level=low
