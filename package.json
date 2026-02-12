@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
 "dependencies": {
-    "axios": "0.21.1",
-    "lodash": "4.17.10",
-    "validator": "13.6.0"
+    "axios": "1.13.5",
+    "lodash": "4.17.23",
+    "validator": "13.15.26"
   },
   "devDependencies": {
-    "prettier": "2.0.0",
-    "eslint": "7.0.0"
+    "prettier": "3.8.1",
+    "eslint": "10.0.0"
   }
 }
