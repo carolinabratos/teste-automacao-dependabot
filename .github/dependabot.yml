@@ -3,8 +3,18 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly" # Ele vai rodar uma vez por semana
+      interval: "weekly"
     groups:
-      dependencies-group: # Nome do grupo
-        patterns:
-          - "*" # Isso agrupa TODAS as atualizações em um único PR
+      # GRUPO 1: Tudo que é usado pelo usuário final (segurança crítica)
+      producao:
+        dependency-type: "production"
+
+      # GRUPO 2: Tudo que é ferramenta de desenvolvimento (baixo risco de quebrar o site)
+      desenvolvimento:
+        dependency-type: "development"
+
+      # GRUPO 3: Apenas atualizações pequenas (Patch/Minor) que raramente quebram algo
+      atualizacoes-seguras:
+        update-types:
+          - "patch"
+          - "minor"
