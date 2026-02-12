@@ -17,9 +17,9 @@
   },
 
   "devDependencies":{
-    "eslint": "7.0.0",
-    "prettier": "2.0.0",
-    "moment": "2.29.1"
+    "eslint": "10.0.0",
+    "prettier": "3.8.1",
+    "moment": "2.30.1"
   
   }
 }
