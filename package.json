@@ -10,13 +10,11 @@
   "author": "",
   "license": "ISC",
 "dependencies": {
-  "axios": "0.21.1",
-  "lodash": "4.17.10",
-  "uma-lib-que-nao-existe-abc-123": "1.0.0",
-   "serialize-javascript": "3.0.0"
+  "axios": "1.13.5",
+  "lodash": "4.17.23"
 },
   "devDependencies": {
-    "eslint": "7.0.0",
-    "prettier": "2.0.0"
+    "eslint": "10.0.0",
+    "prettier": "3.8.1"
   }
 }
