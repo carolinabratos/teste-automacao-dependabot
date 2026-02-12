@@ -11,9 +11,9 @@
   "license": "ISC",
 
   "dependencies": {
-    "lodash": "4.17.10",
-    "axios": "0.21.1",
-    "atob": "2.0.3"
+    "lodash": "4.17.23",
+    "axios": "1.13.5",
+    "atob": "2.1.2"
   },
 
   "devDependencies":{
