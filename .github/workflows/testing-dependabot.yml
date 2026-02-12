@@ -1,21 +1,22 @@
 name: Validador de Dependencias
-on: pull_request # Roda sempre que um PR for aberto
+
+on:
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   check-integrity:
     runs-on: ubuntu-latest
-    # Só roda se o PR foi aberto pelo Dependabot
-    if: github.actor == 'dependabot[bot]' 
-    
     steps:
-      - name: Baixar Código
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }} # Garante que está na branch do PR
 
-      - name: Configurar Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use a versão que você usa no seu PC
-          cache: 'npm'
+          node-version: 20
+          # Removi a linha do cache: 'npm' para evitar que ele trave se não achar o lockfile de cara
 
       - name: Instalar Dependências
         run: npm install
