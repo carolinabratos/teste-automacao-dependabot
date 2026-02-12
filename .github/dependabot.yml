@@ -5,16 +5,6 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      # GRUPO 1: Tudo que é usado pelo usuário final (segurança crítica)
-      producao:
-        dependency-type: "production"
-
-      # GRUPO 2: Tudo que é ferramenta de desenvolvimento (baixo risco de quebrar o site)
-      desenvolvimento:
-        dependency-type: "development"
-
-      # GRUPO 3: Apenas atualizações pequenas (Patch/Minor) que raramente quebram algo
-      atualizacoes-seguras:
-        update-types:
-          - "patch"
-          - "minor"
+      todos-os-pacotes: # Um único grupo para tudo
+        patterns:
+          - "*"
